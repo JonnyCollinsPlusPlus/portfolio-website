@@ -1,6 +1,3 @@
-/* Shared styles for the project pages (Due Process, Loco-Comotives, ...). Load AFTER stylesheet.css and normalize.css.
-   Every class here is prefixed dp- so nothing in the rest of your site is affected.
-   Headings (h1/h2/h3) keep the pixel font your stylesheet.css already gives them. */
 
 .dp-page {
   --dp-ink: #1B1B3A;
@@ -26,11 +23,12 @@
 .dp-page a:hover, .dp-page a:focus-visible { text-decoration: underline; }
 .dp-page a:focus-visible, .dp-page iframe:focus-visible { outline: 3px solid var(--dp-accent); outline-offset: 3px; }
 .dp-page h1, .dp-page h2, .dp-page h3 { margin: 0; padding: 0; }
+.dp-page h3 { font-family: "Bitcount", system-ui; }
 
 /* Hero */
 .dp-hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center; }
 .dp-hero-text { display: flex; flex-direction: column; gap: 18px; }
-.dp-page h1 { font-size: 56px; line-height: 1.05; color: var(--dp-accent); text-shadow: 3px 3px 0 var(--dp-shadow); }
+.dp-page h1 { overflow-wrap: anywhere; line-height: 1.05; color: var(--dp-accent); text-shadow: 3px 3px 0 var(--dp-shadow); }
 .dp-sub { margin: 0; font-size: 18px; line-height: 1.5; }
 .dp-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .dp-chips li { padding: 6px 14px; border-radius: 999px; font-size: 12px; line-height: 1.5; }
@@ -76,7 +74,6 @@
 
 @media (max-width: 640px) {
   .dp-page { padding: 24px 20px 40px; gap: 32px; }
-  .dp-page h1 { font-size: 40px; }
 }
 @media (prefers-reduced-motion: reduce) { .dp-page * { transition: none !important; animation: none !important; } }
 
@@ -87,13 +84,30 @@
 
 /* Local video, screenshot gallery, status box, button */
 .dp-video video { width: 100%; height: 100%; display: block; object-fit: cover; }
-.dp-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
-.dp-gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; display: block; }
 .dp-callout { padding: 20px 24px; border-radius: 14px; background: var(--dp-accent-soft); font-size: 14px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .dp-callout p { margin: 0; }
 .dp-page a.dp-btn { display: inline-block; padding: 10px 18px; border-radius: 8px; background: var(--dp-accent); color: #fff; font-size: 13px; font-weight: 700; }
 .dp-page a.dp-btn:hover { text-decoration: none; filter: brightness(1.1); }
 
-/* Gallery hover zoom. Swap the scale value for whatever your old .gallery img:hover used. */
-.dp-gallery img { position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.dp-gallery img:hover { transform: scale(1.15); z-index: 2; box-shadow: 0 8px 24px rgba(27, 27, 58, 0.25); }
+
+/* Screenshot strip: your original behaviour, the hovered image grows wider than its neighbours */
+.dp-gallery { display: flex; width: 100%; gap: 5px; }
+.dp-gallery img {
+  height: 250px;
+  flex: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+.dp-gallery img:hover { flex: 2; }
+@media (max-width: 768px) {
+  .dp-gallery img { height: 160px; }
+}
+
+/* Screenshots and title sprite */
+.dp-shot { width: 100%; height: auto; border-radius: 14px; display: block; }
+.dp-shot-wide { max-height: 420px; object-fit: cover; object-position: center; }
+.dp-title-row { display: flex; align-items: center; gap: 16px; }
+.dp-sprite { height: 56px; width: auto; image-rendering: pixelated; }

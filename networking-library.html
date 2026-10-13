@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Collins</title>
+    <title>UDPGameNetworking | Jonathan Collins</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
 <div class="grid-bg">
@@ -23,8 +24,8 @@
             <div class="browser-address">www.jonathan-collins-portfolio.com/projects/networking-library</div>
         </div>
         <div class="nav">
-            <a href="index.html" class="nav-item active">About Me</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="index.html" class="nav-item">About Me</a>
+            <a href="index.html#projects" class="nav-item active">Projects</a>
             <a href="index.html#skills" class="nav-item">Skills</a>
             <a href="index.html#experience" class="nav-item">Experience</a>
             <a href="index.html#contact" class="nav-item">Contact</a>
@@ -38,56 +39,96 @@
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
         </div>
-        <div class="game-content">
-            <div class="maingrid">
-                <div>
-                    <h1 class="networking-header">UDPGameNetworking</h1>
-                    <h2>A general purpose <span class="glow-purple">UDP networking library</span>, built in <span class="glow-purple">C++</span> with <span class="glow-purple">SDL3</span> and <span class="glow-purple">SDLNet</span></h2>
-                <img src="images/game-stick.gif" alt="Joystick" class="joystick">
-                </div>
-                <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/ibkF_ioUvFo?autoplay=1&mute=1"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-                loop="1"
-                controls="0"></iframe>            
-            </div>
-                <br>
-            <div class="bio-styling">
-                <p>After finishing my <b><a href="user-api.html"  target="_blank" rel="noopener noreferrer">University Game Networking Project</a></b>. I felt that the
-                     networking code could have been improved,
-                     and following the recent full release of <b><a href="https://wiki.libsdl.org/SDL3/FrontPage  target="_blank" rel="noopener noreferrer"">SDL3</a></b>,
-                      I decided to make a <b>games networking library</b>. I wanted to keep the advantages of my original code: fast messages sent over UDP, and value interpolation.
-                       However the code needed a full refactor to generalise the data streaming. I added all of these features, and made a small demo, which can be found in the 
-                       <b><a href="https://github.com/ExtraSoupGames/UDPGameNetworking  target="_blank" rel="noopener noreferrer"">GitHub repo</a></b>.</p>
-            </div>
-            <br>
-            <div class="maingrid-networking">
-                <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" class="demo-img"/>
-                <div>
-                <h2>Main library features:</h2>
-                    <ul class="features-list">
-                        <li>UDP Data streaming</li>
-                        <li>Message acknowledgement option (TCP style)</li>
-                        <li>Value interpolation option</li>
-                        <li>Custom data transmission option</li>
-                    </ul>
-                </p>
-                </div>
-            </div>
-        </div>
 
-            <div class="bio-styling">
-                <p>While the library works on its own, there is more I would like to do with this project.
-                    Most notably, I would love to make an <b>engine specific-wrapper</b>, as well as an <b>extension,
-                    for Unity</b> for example, to allow this library to be used within an engine without extensive
-                    setup. I would also love to provide <b>better documentation</b>, implement <b>NAT traversal</b>, and
-                     make a more <b>extensive demo</b>.
-                </p>
-            </div>
-        </div>
+        <main class="dp-page dp-theme-purple">
+            <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+
+            <header class="dp-hero">
+                <div class="dp-hero-text">
+                    <div class="dp-title-row">
+                        <h1>UDPGameNetworking</h1>
+                        <img src="images/game-stick.gif" alt="" class="dp-sprite">
+                    </div>
+                    <p class="dp-sub">A general purpose UDP networking library, built in C++ with SDL3 and SDLNet.</p>
+                    <ul class="dp-chips">
+                        <li class="dp-chip-green">C++</li>
+                        <li class="dp-chip-green">SDL3</li>
+                        <li class="dp-chip-green">SDLNet</li>
+                        <li class="dp-chip-pink">UDP</li>
+                    </ul>
+                    <a class="dp-btn" href="https://github.com/ExtraSoupGames/UDPGameNetworking" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="dp-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/ibkF_ioUvFo?autoplay=1&mute=1"
+                        title="UDPGameNetworking demo video"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                </div>
+            </header>
+
+            <section class="dp-intro" style="grid-template-columns: 1fr;">
+                <p>After finishing my <b><a href="user-api.html" target="_blank" rel="noopener noreferrer">University Game Networking Project</a></b>,
+                I felt that the networking code could have been improved, and following the recent full release of
+                <b><a href="https://wiki.libsdl.org/SDL3/FrontPage" target="_blank" rel="noopener noreferrer">SDL3</a></b>,
+                I decided to make a <b>games networking library</b>. I wanted to keep the advantages of my original code:
+                fast messages sent over UDP, and value interpolation. However the code needed a full refactor to generalise
+                the data streaming. I added all of these features, and made a small demo, which can be found in the
+                <b><a href="https://github.com/ExtraSoupGames/UDPGameNetworking" target="_blank" rel="noopener noreferrer">GitHub repo</a></b>.</p>
+            </section>
+
+            <section class="dp-section">
+                <h2>Main library features</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>UDP data streaming</h3>
+                        <p>Fast messages sent over UDP.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Acknowledgements</h3>
+                        <p>An option to acknowledge messages, TCP style.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Value interpolation</h3>
+                        <p>An option to interpolate received values.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>Custom data</h3>
+                        <p>An option to transmit your own data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <img src="images/UDPGameNetworkingGIF.gif" alt="UDPGameNetworking Demo" class="dp-shot">
+
+            <section class="dp-section">
+                <h2>What's next</h2>
+                <p>While the library works on its own, there is more I would like to do with this project.</p>
+                <div class="dp-grid dp-grid-small">
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Engine wrappers</h3>
+                        <p>An engine-specific wrapper, such as a Unity extension, so the library can be used in an engine without extensive setup.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Better documentation</h3>
+                        <p>Clearer docs for anyone using the library.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>NAT traversal</h3>
+                        <p>Support for connecting players behind NATs.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>A bigger demo</h3>
+                        <p>A more extensive demo of what the library can do.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="dp-foot">
+                <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+                <a href="user-api.html">Next project <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </main>
     </div>
 </div>
 <script src="script.js"></script>

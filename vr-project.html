@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Collins</title>
+    <title>VR Project | Jonathan Collins</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
 <div class="grid-bg">
@@ -23,8 +24,8 @@
             <div class="browser-address">www.jonathan-collins-portfolio.com/projects/vr-project</div>
         </div>
         <div class="nav">
-            <a href="index.html" class="nav-item active">About Me</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="index.html" class="nav-item">About Me</a>
+            <a href="index.html#projects" class="nav-item active">Projects</a>
             <a href="index.html#skills" class="nav-item">Skills</a>
             <a href="index.html#experience" class="nav-item">Experience</a>
             <a href="index.html#contact" class="nav-item">Contact</a>
@@ -38,49 +39,84 @@
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
         </div>
-<div class="game-content">
-            <div class="maingrid">
-                <div>
-                    <h1>VR Project</h1>
-                    <h2>A small VR game demo made in a group using Unity and OpenXR</h2>
-                <img src="images/game-stick.gif" alt="Joystick" class="joystick">
+
+        <main class="dp-page dp-theme-orange">
+            <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+
+            <header class="dp-hero">
+                <div class="dp-hero-text">
+                    <div class="dp-title-row">
+                        <h1>VR Project</h1>
+                        <img src="images/game-stick.gif" alt="" class="dp-sprite">
+                    </div>
+                    <p class="dp-sub">A small VR game demo made in a group of four with Unity and OpenXR.</p>
+                    <ul class="dp-chips">
+                        <li class="dp-chip-green">Unity</li>
+                        <li class="dp-chip-green">OpenXR</li>
+                        <li class="dp-chip-pink">Team of 4</li>
+                        <li class="dp-chip-beige">Third year university module</li>
+                    </ul>
                 </div>
                 <img src="images/VR-2.png"
-                 alt="VR screenshot showing device simulator and generated terrain with spaceship"
-                  class="demo-img"
-                  width = "512"
-                  height = "320"/>           
-            </div>
-                <br>
-            <div class="bio-styling">
+                     alt="VR screenshot showing device simulator and generated terrain with spaceship"
+                     class="dp-shot" width="512" height="320">
+            </header>
+
+            <section class="dp-intro" style="grid-template-columns: 1fr;">
                 <p>I created this project in a group with 3 others for my VR module for my third year of University. We divided
-                     up the workload such that I would focus on the core gameplay features, due to my experience with Unity.
-                     The development process presented significant challenges due to my inexperience with VR and the relatively
-                     short project timeline. In the end we implemented the core features we intended to, an interactive spaceship
-                     that the player could explore, a fuel system where the player needed fuel to travel to certain planets, 
-                     as well as trivia questions about space which allowed the player to earn fuel. This project taught me about the
-                     unique ways in which players can interact with the games they play, going beyond just a handheld controller.
-                </p>
-            </div>
-            <br>
-            <div class="maingrid-vr">
-                <img src="images/VR-1.png" alt="VR screenshot showing device simulator and generated terrain"
-                 class="demo-img"
-                 width = "512"
-                height = "320"/>
-                <div>
-                <h2>My responsibilities:</h2>
-                    <ul">
-                        <li>Interactive spaceship</li>
-                        <li>Question and answer UI</li>
-                        <li>Fuel and planet travel system</li>
-                        <li>GitHub repo management, handling merge conflicts</li>
-                        <li>Teaching others how to use Unity, and GitHub</li>
-                    </ul>
-                </p>
+                up the workload such that I would focus on the core gameplay features, due to my experience with Unity.
+                The development process presented significant challenges due to my inexperience with VR and the relatively
+                short project timeline. In the end we implemented the core features we intended to, an interactive spaceship
+                that the player could explore, a fuel system where the player needed fuel to travel to certain planets,
+                as well as trivia questions about space which allowed the player to earn fuel. This project taught me about the
+                unique ways in which players can interact with the games they play, going beyond just a handheld controller.</p>
+            </section>
+
+            <section class="dp-section">
+                <h2>What I built</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Interactive spaceship</h3>
+                        <p>A ship the player can explore in VR.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>Question and answer UI</h3>
+                        <p>Trivia questions about space that let the player earn fuel.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Fuel and planet travel</h3>
+                        <p>The player needs fuel to travel to certain planets.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section class="dp-section">
+                <h2>Working in the team</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Challenge</h3>
+                        <p>Little VR experience and a short project timeline.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>My team role</h3>
+                        <p>Managed the GitHub repo and handled merge conflicts. Taught others how to use Unity and GitHub.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>Takeaway</h3>
+                        <p>Players can interact with games in ways that go beyond a handheld controller.</p>
+                    </div>
+                </div>
+            </section>
+
+            <img src="images/VR-1.png"
+                 alt="VR screenshot showing device simulator and generated terrain"
+                 class="dp-shot dp-shot-wide" width="512" height="320">
+
+            <footer class="dp-foot">
+                <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+                <a href="due-process.html">Next project <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </main>
     </div>
 </div>
 <script src="script.js"></script>
