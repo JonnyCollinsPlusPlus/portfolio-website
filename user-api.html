@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Collins</title>
+    <title>UserAPI | Jonathan Collins</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
 <div class="grid-bg">
@@ -20,11 +21,11 @@
                 <div class="browser-dot dot-yellow"></div>
                 <div class="browser-dot dot-green"></div>
             </div>
-            <div class="browser-address">www.jonathan-collins-portfolio.com/projects/sync-slate</div>
+            <div class="browser-address">www.jonathan-collins-portfolio.com/projects/user-api</div>
         </div>
         <div class="nav">
-            <a href="index.html" class="nav-item active">About Me</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="index.html" class="nav-item">About Me</a>
+            <a href="index.html#projects" class="nav-item active">Projects</a>
             <a href="index.html#skills" class="nav-item">Skills</a>
             <a href="index.html#experience" class="nav-item">Experience</a>
             <a href="index.html#contact" class="nav-item">Contact</a>
@@ -38,115 +39,81 @@
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
         </div>
-        <div class="game-content">
-            <div class="maingrid-tt">
-                <div>
-                    <h1>User API</h1>
-                    <h2>A secure </h2>
-                        <div class="tt-grade-badge">
-                        <i class="ti ti-school" aria-hidden="true" style="font-size:16px;"></i>
-                        University grade: <span class="tt-grade-num">95%</span> 
-                    </div>
-                    <img src="images/fish.gif" alt="Fish" class="fish">
-                </div>
-                <div>
-                    <div class="tt-terminal">
-                        <div class="tt-terminal-bar">
-                            <div class="tt-dot tt-dot-r"></div>
-                            <div class="tt-dot tt-dot-y"></div>
-                            <div class="tt-dot tt-dot-g"></div>
-                            <span class="tt-filename">ServerManager.cpp</span>
-                        </div>
-                    <div class="tt-code">
-<span class="kw">void</span> <span class="fn">ServerManager::Send</span>(<span class="tp">bitset</span>&lt;<span class="tp">32</span>&gt; headerData,
-  <span class="tp">vector</span>&lt;<span class="tp">bitset</span>&lt;<span class="tp">8</span>&gt;&gt; packetData,
-  <span class="tp">IPaddress</span> address, <span class="kw">int</span> length) {
- 
-  <span class="cm">// Allocate packet sized to the data</span>
-  <span class="tp">UDPpacket</span>* packet = <span class="fn">SDLNet_AllocPacket</span>(length);
-  <span class="kw">if</span> (!packet) {
-    std::cerr &lt;&lt; <span class="str">"SDLNet_AllocPacket: "</span>
-              &lt;&lt; <span class="fn">SDLNet_GetError</span>() &lt;&lt; std::endl;
-    <span class="fn">SDLNet_UDP_Close</span>(socket);
-    <span class="fn">SDL_Quit</span>();
-  }
- 
-  <span class="cm">// Copy header to start of packet data</span>
-  <span class="fn">memcpy</span>(packet-&gt;data, &amp;headerData, <span class="tp">4</span>);
- 
-  <span class="cm">// Iterate, copying each byte</span>
-  <span class="kw">for</span> (<span class="kw">int</span> i = <span class="tp">0</span>; i &lt; packetData.<span class="fn">size</span>(); i++) {
-    <span class="fn">memcpy</span>(packet-&gt;data + <span class="tp">4</span> + i,
-      &amp;packetData.<span class="fn">at</span>(i), <span class="tp">1</span>);
-  }
-  packet-&gt;len = length + <span class="tp">1</span>;
-  packet-&gt;address = address;
- 
-  <span class="kw">if</span> (<span class="fn">SDLNet_UDP_Send</span>(socket, -<span class="tp">1</span>, packet) == <span class="tp">0</span>) {
-    std::cerr &lt;&lt; <span class="str">"SDLNet_UDP_Send: "</span>
-              &lt;&lt; <span class="fn">SDLNet_GetError</span>() &lt;&lt; std::endl;
-  }
-}</div>
-                </div>
-            </div>
-                </div>
-            </div>
-                <br>
-            <div class="bio-styling">
-                <p>Tidal Tussle was a game I made for my third year Multiplayer Games Development university module. I was tasked with
-                    creating a game using either <b>Unity</b>, <b>Unreal</b>, or <b>C++ with SDL</b> that implemented networking technologies. I decided to 
-                    use <b>C++</b> with SDL and first researched different networking protocols available to me. This research led me to choose
-                    UDP over TCP as my protocol. I recieved a <b>95%</b> grade for this project and its associated report. 
-                </p>
-            </div>
-            <br>
-                <div class="tt-compare">
-                <p class="tt-compare-label">Protocol decision — UDP vs TCP</p>
-                <div class="tt-compare-grid">
 
-                    <!-- UDP column -->
-                    <div class="tt-col tt-col-udp">
-                        <p class="tt-col-title">UDP ✓ chosen</p>
-                        <div class="tt-row tt-row-pro">
-                            <i class="ti ti-bolt tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">Lower latency — no handshake overhead per packet</span>
-                        </div>
-                        <div class="tt-row tt-row-pro">
-                            <i class="ti ti-settings tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">TCP features can be layered on top as needed</span>
-                        </div>
-                        <div class="tt-row tt-row-con">
-                            <i class="ti ti-tool tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">Requires more implementation work for stable, reliable systems</span>
-                        </div>
-                        <div class="tt-choice-banner">
-                            <i class="ti ti-check" aria-hidden="true" style="font-size:15px;"></i>
-                            Best fit for a real-time action game
-                        </div>
+        <main class="dp-page dp-theme-teal">
+            <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+
+            <header class="dp-hero">
+                <div class="dp-hero-text">
+                    <h1>UserAPI</h1>
+                    <p class="dp-sub">A C# .NET API that handles user logins.</p>
+                    <ul class="dp-chips">
+                        <li class="dp-chip-green">C#</li>
+                        <li class="dp-chip-green">.NET</li>
+                        <li class="dp-chip-pink">PostgreSQL</li>
+                        <li class="dp-chip-pink">JWT</li>
+                        <li class="dp-chip-beige">Deployed on Render and Neon</li>
+                    </ul>
+                </div>
+                <div class="dp-callout">
+                    <h2>Try it live</h2>
+                    <p>UserAPI is deployed and running. Render may need up to a minute to spin up once the page loads.</p>
+                    <a class="dp-btn" href="https://userapi-i3ea.onrender.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open the live API</a>
+                    <a class="dp-btn" href="https://github.com/JonnyCollinsPlusPlus/UserAPI"><i class="fa-brands fa-github"></i> View the code</a>
+                </div>
+            </header>
+
+            <section class="dp-intro" style="grid-template-columns: 1fr;">
+                <p>UserAPI is a C# .NET API that handles user logins. It authenticates users with <b>JWTs</b>,
+                stores data in a <b>PostgreSQL</b> database, hashes passwords with <b>BCrypt</b>, and is tested
+                automatically with <b>xUnit</b> and <b>GitHub Actions</b>. It is deployed via <b>Render</b> and <b>Neon</b>,
+                and you can try it live.</p>
+            </section>
+
+            <section class="dp-section">
+                <h2>Main features</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-green">
+                        <h3>JWT authentication</h3>
+                        <p>Users are authenticated with JSON Web Tokens.</p>
                     </div>
- 
-                    <div class="tt-col-divider">vs</div>
- 
-                    <!-- TCP column -->
-                    <div class="tt-col tt-col-tcp">
-                        <p class="tt-col-title">TCP</p>
-                        <div class="tt-row tt-row-pro">
-                            <i class="ti ti-check tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">Built-in message acknowledgement and ordering</span>
-                        </div>
-                        <div class="tt-row tt-row-pro">
-                            <i class="ti ti-package tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">Easier to use out of the box — less to implement</span>
-                        </div>
-                        <div class="tt-row tt-row-con">
-                            <i class="ti ti-hourglass tt-icon" aria-hidden="true"></i>
-                            <span class="tt-row-text">Slower — confirmation round-trips add latency to every message</span>
-                        </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>PostgreSQL backend</h3>
+                        <p>User data is stored in a PostgreSQL database.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>BCrypt password hashing</h3>
+                        <p>Passwords are hashed with BCrypt.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Automated testing</h3>
+                        <p>xUnit tests run automatically through GitHub Actions.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-        </div>
+            <section class="dp-section">
+                <h2>Tech stack</h2>
+                <ul class="dp-tags">
+                    <li class="dp-chip-green">C#</li>
+                    <li class="dp-chip-green">.NET</li>
+                    <li class="dp-chip-pink">PostgreSQL</li>
+                    <li class="dp-chip-pink">JWT</li>
+                    <li class="dp-chip-pink">BCrypt</li>
+                    <li class="dp-chip-beige">xUnit</li>
+                    <li class="dp-chip-beige">GitHub Actions</li>
+                    <li class="dp-chip-green">Render</li>
+                    <li class="dp-chip-green">Neon</li>
+                </ul>
+            </section>
+
+
+
+            <footer class="dp-foot">
+                <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+                <a href="sync-slate.html">Next project <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </main>
     </div>
 </div>
 <script src="script.js"></script>
