@@ -249,8 +249,8 @@ hr.animate {
     grid-template-areas: 
         "due-process-img loco-comotives-img network-library-img"
         "dp-desc lc-desc udp-desc"
-        "tidal-tussle-img traffic-game-img vr-project-img"
-        "tidal-tussle-desc traffic-game-desc vr-desc";
+        "user-api-img sync-slate-img vr-project-img"
+        "user-api-desc sync-slate-desc vr-desc";
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
@@ -295,24 +295,24 @@ hr.animate {
     grid-area: udp-desc;
 }
 
-.tidal-tussle-img {
-    grid-area: tidal-tussle-img;
+.user-api-img {
+    grid-area: user-api-img;
 }
 
-.traffic-game-img {
-    grid-area: traffic-game-img;
+.sync-slate-img {
+    grid-area: sync-slate-img;
 }
 
 .vr-project-img {
     grid-area: vr-project-img;
 }
 
-.tidal-tussle-desc {
-    grid-area: tidal-tussle-desc;
+.user-api-desc {
+    grid-area: user-api-desc;
 }
 
-.traffic-game-desc {
-    grid-area: traffic-game-desc;
+.sync-slate-desc {
+    grid-area: sync-slate-desc;
 }
 
 .vr-desc {
@@ -1013,10 +1013,10 @@ hr.animate {
     grid-template-areas:
       "due-process-img     loco-comotives-img"
       "dp-desc             lc-desc"
-      "network-library-img tidal-tussle-img"
-      "udp-desc            tidal-tussle-desc"
-      "traffic-game-img    vr-project-img"
-      "traffic-game-desc   vr-desc";
+      "network-library-img user-api-img"
+      "udp-desc            user-api-desc"
+      "sync-slate-img    vr-project-img"
+      "sync-slate-desc   vr-desc";
     padding-left: 4%;
     padding-right: 4%;
     width: auto;
@@ -1125,14 +1125,14 @@ hr.animate {
   .due-process-img,
   .loco-comotives-img,
   .network-library-img,
-  .tidal-tussle-img,
-  .traffic-game-img,
+  .user-api-img,
+  .sync-slate-img,
   .vr-project-img,
   .dp-desc,
   .lc-desc,
   .udp-desc,
-  .tidal-tussle-desc,
-  .traffic-game-desc,
+  .user-api-desc,
+  .sync-slate-desc,
   .vr-desc {
     grid-area: unset;
   }
@@ -1144,10 +1144,10 @@ hr.animate {
   .lc-desc            { order: 4; }
   .network-library-img{ order: 5; }
   .udp-desc           { order: 6; }
-  .tidal-tussle-img   { order: 7; }
-  .tidal-tussle-desc  { order: 8; }
-  .traffic-game-img   { order: 9; }
-  .traffic-game-desc  { order: 10; }
+  .user-api-img   { order: 7; }
+  .user-api-desc  { order: 8; }
+  .sync-slate-img   { order: 9; }
+  .sync-slate-desc  { order: 10; }
   .vr-project-img     { order: 11; }
   .vr-desc            { order: 12; }
 

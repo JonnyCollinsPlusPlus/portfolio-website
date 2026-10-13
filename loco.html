@@ -4,13 +4,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Collins</title>
+    <title>Loco-Comotives | Jonathan Collins</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
 <div class="grid-bg">
@@ -24,8 +25,8 @@
             <div class="browser-address">www.jonathan-collins-portfolio.com/projects/loco-comotives</div>
         </div>
         <div class="nav">
-            <a href="index.html" class="nav-item active">About Me</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="index.html" class="nav-item">About Me</a>
+            <a href="index.html#projects" class="nav-item active">Projects</a>
             <a href="index.html#skills" class="nav-item">Skills</a>
             <a href="index.html#experience" class="nav-item">Experience</a>
             <a href="index.html#contact" class="nav-item">Contact</a>
@@ -39,42 +40,76 @@
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
         </div>
-        <div class="game-content">
-            <div class="maingrid">
-                <div>
-                    <h1 class="glow-green">Loco-Comotives</h1>
-                    <h2>A train management game developed in <span class="glow-green">Godot</span></h2>
+
+        <main class="dp-page dp-theme-green">
+            <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+
+            <header class="dp-hero">
+                <div class="dp-hero-text">
+                    <h1>Loco-Comotives</h1>
+                    <p class="dp-sub">A train management game built in Godot, in active development.</p>
+                    <ul class="dp-chips">
+                        <li class="dp-chip-green">Godot</li>
+                        <li class="dp-chip-pink">Since November 2025</li>
+                        <li class="dp-chip-beige">Aiming for a public release</li>
+                    </ul>
                 </div>
-                <div><video autoplay loop muted width="462" height="270"><source src="images/loco-video.mp4" type="video/mp4"></video></div>
-            </div>
-            <div class="bio-styling">
+                <div class="dp-video">
+                    <video autoplay loop muted playsinline aria-label="Loco-Comotives gameplay">
+                        <source src="images/loco-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </header>
+
+            <section class="dp-intro" style="grid-template-columns: 1fr;">
                 <p>Loco-Comotives is a train management game I have been working on since <b>November 2025</b>.
-                     By creating multiple <b>prototypes</b> and playtesting with friends I have been able to hone 
-                     in on a concept I feel confidently about. I am working towards finishing the game and 
-                     am aiming to <b>release</b> the game <b>publicly</b>. Due to my early stage in development, however, I 
-                     am unable to provide a release date at the current time.</p>
-            </div>
-            <div class="gallery">
+                By creating multiple <b>prototypes</b> and playtesting with friends, I have been able to hone
+                in on a concept I feel confident about. I am working towards finishing the game and
+                am aiming to <b>release</b> the game <b>publicly</b>. Due to my early stage in development, however, I
+                am unable to provide a release date at the current time.</p>
+            </section>
+
+            <section class="dp-gallery">
                 <img src="images/loco-1.png" alt="Close up of a train arriving at a station" />
                 <img src="images/loco-2.png" alt="A station, with the rail shop menu" />
                 <img src="images/loco-3.png" alt="A close up of a station leading to a junction with multiple routes" />
                 <img src="images/loco-4.png" alt="An engineer fixing the tracks, with a train at a station in the background" />
                 <img src="images/loco-5.png" alt="A close up of a non connected station" />
-            </div>
+            </section>
 
-            <div class="loco-features">
-                <p>This project is in active development. The source code is private but can be shared upon request.</p>
-                <div>
-                <h3>Main systems:</h3>
-                    <ul>
-                     <li>Custom rail networks, junctions, stations, all navigated by trains, and editable</li>
-                     <li>Hazards appear in real time, providing an extra challenge for players</li>
-                     <li>Economy system, bonus cargo jobs to get extra money and a shop to buy rails to expand your networks</li>
-                     <li>Perk unlocks, after each day new perks, as well as drawbacks are added, making every run feel unique</li>
-                    </ul>
+            <section class="dp-section">
+                <h2>Main systems</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Rail networks</h3>
+                        <p>Custom rails, junctions and stations. Trains navigate them, and players can edit them.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>Real-time hazards</h3>
+                        <p>Hazards appear as you play, providing an extra challenge.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Economy</h3>
+                        <p>Bonus cargo jobs earn extra money, and a shop sells rails to expand your network.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Perk unlocks</h3>
+                        <p>New perks and drawbacks are added after each day, making every run feel unique.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section class="dp-callout">
+                <p>This project is in active development. The source code is private but can be shared upon request.</p>
+                <a class="dp-btn" href="index.html#contact">Request the source</a>
+            </section>
+
+            <footer class="dp-foot">
+                <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+                <!-- Change to your next project's real filename -->
+                <a href="networking-library.html">Next project <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </main>
     </div>
 </div>
 <script src="script.js"></script>
