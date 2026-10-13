@@ -552,8 +552,10 @@ hr.animate {
 
 .card:nth-child(1) { grid-column: span 4; background: #f0f4e8; animation-delay: 0.05s; }
 .card:nth-child(2) { grid-column: span 2; background: #fdf0f0; animation-delay: 0.10s; }
-.card:nth-child(3) { grid-column: span 2; background: #f5f0e4; animation-delay: 0.15s; }
-.card:nth-child(4) { grid-column: span 4; background: #f2f4ed; animation-delay: 0.20s; }
+.card:nth-child(3) { grid-column: span 3; background: #f5f0e4; animation-delay: 0.15s; }
+.card:nth-child(4) { grid-column: span 3; background: #f2f4ed; animation-delay: 0.20s; }
+.card:nth-child(5) { grid-column: span 4; background: #f2f4ed; animation-delay: 0.20s; }
+.card:nth-child(6) { grid-column: span 2; background: #fdf0f0; animation-delay: 0.20s; }
 
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -607,6 +609,12 @@ hr.animate {
 
 .card:nth-child(4) .pill { background: rgba(122,140,74,0.12); color: #7a8c4a; border-color: rgba(122,140,74,0.2); }
 .card:nth-child(4) .pill:hover { background: #7a8c4a; color: white; }
+
+.card:nth-child(5) .pill { background: rgba(122,140,74,0.12); color: #94a067; border-color: rgba(122,140,74,0.2); }
+.card:nth-child(5) .pill:hover { background: #94a067; color: white; }
+
+.card:nth-child(6) .pill { background: rgba(212,132,122,0.2); color: #d4847a; border-color: rgba(212,132,122,0.2); }
+.card:nth-child(6) .pill:hover { background: #d4847a; color: white; }
 
 .blob {
   position: absolute;
