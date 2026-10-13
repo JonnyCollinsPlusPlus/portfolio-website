@@ -111,3 +111,9 @@
 .dp-shot-wide { max-height: 420px; object-fit: cover; object-position: center; }
 .dp-title-row { display: flex; align-items: center; gap: 16px; }
 .dp-sprite { height: 56px; width: auto; image-rendering: pixelated; }
+
+/* Teal accent (User API page) */
+.dp-theme-teal { --dp-accent: #0F6E56; --dp-accent-soft: #E1F5EE; --dp-shadow: #b6e3d3; }
+
+/* Rose accent (SyncSlate page) */
+.dp-theme-rose { --dp-accent: #be7383; --dp-accent-soft: #FBE8EE; --dp-shadow: #f0c2cf; }
