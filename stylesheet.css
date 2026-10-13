@@ -247,8 +247,8 @@ hr.animate {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
-        "due-process-img loco-comotives-img network-library-img"
-        "dp-desc lc-desc udp-desc"
+        "due-process-img network-library-img loco-comotives-img"
+        "dp-desc udp-desc lc-desc"
         "user-api-img sync-slate-img vr-project-img"
         "user-api-desc sync-slate-desc vr-desc";
     padding-left: 10%;
