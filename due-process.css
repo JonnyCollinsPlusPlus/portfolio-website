@@ -1,0 +1,80 @@
+/* Due Process page. Load AFTER stylesheet.css and normalize.css.
+   Every class here is prefixed dp- so nothing in the rest of your site is affected.
+   Headings (h1/h2/h3) keep the pixel font your stylesheet.css already gives them. */
+
+.dp-page {
+  --dp-ink: #1B1B3A;
+  --dp-accent: #1F1AA8;
+  --dp-accent-soft: #E9E8FA;
+  --dp-green: #E4EAD8;   --dp-green-ink: #4A5A28;   --dp-green-tile: #EEF1E4;
+  --dp-pink: #F9E3E3;    --dp-pink-ink: #8E3F3B;    --dp-pink-tile: #FBEAEA;
+  --dp-beige: #F1E8DA;   --dp-beige-ink: #6E5A3A;   --dp-beige-tile: #F4ECDF;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  color: var(--dp-ink);
+}
+.dp-page *, .dp-page *::before, .dp-page *::after { box-sizing: border-box; }
+.dp-page p, .dp-page li { font-family: "Roboto Mono", monospace; line-height: 1.7; }
+.dp-page a { color: var(--dp-accent); text-decoration: none; }
+.dp-page a:hover, .dp-page a:focus-visible { text-decoration: underline; }
+.dp-page a:focus-visible, .dp-page iframe:focus-visible { outline: 3px solid var(--dp-accent); outline-offset: 3px; }
+.dp-page h1, .dp-page h2, .dp-page h3 { margin: 0; padding: 0; }
+
+/* Hero */
+.dp-hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: center; }
+.dp-hero-text { display: flex; flex-direction: column; gap: 18px; }
+.dp-page h1 { font-size: 56px; line-height: 1.05; color: var(--dp-accent); text-shadow: 3px 3px 0 #b9b7ef; }
+.dp-sub { margin: 0; font-size: 18px; line-height: 1.5; }
+.dp-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.dp-chips li { padding: 6px 14px; border-radius: 999px; font-size: 12px; line-height: 1.5; }
+.dp-chip-green { background: var(--dp-green); color: var(--dp-green-ink); }
+.dp-chip-pink  { background: var(--dp-pink);  color: var(--dp-pink-ink); }
+.dp-chip-beige { background: var(--dp-beige); color: var(--dp-beige-ink); }
+.dp-video { aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #0b0b14; }
+.dp-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* Intro + quote */
+.dp-intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: center; }
+.dp-intro p { margin: 0; font-size: 15px; }
+.dp-quote { margin: 0; padding: 20px 24px; border-radius: 14px; background: var(--dp-accent-soft); color: var(--dp-accent); font-size: 20px; line-height: 1.4; }
+
+/* Section headings */
+.dp-section { display: flex; flex-direction: column; gap: 16px; }
+.dp-page h2 { font-size: 28px; }
+.dp-kicker { margin: 0; font-size: 13px; color: var(--dp-pink-ink); }
+
+/* Tiles (used for bug steps and responsibilities) */
+.dp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.dp-tile { padding: 20px; border-radius: 14px; font-size: 14px; line-height: 1.6; }
+.dp-tile h3 { font-size: 20px; margin-bottom: 8px; }
+.dp-tile p { margin: 0; }
+.dp-tile-green { background: var(--dp-green-tile); color: var(--dp-green-ink); }
+.dp-tile-pink  { background: var(--dp-pink-tile);  color: var(--dp-pink-ink); }
+.dp-tile-beige { background: var(--dp-beige-tile); color: var(--dp-beige-ink); }
+.dp-grid-small { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.dp-grid-small .dp-tile { padding: 16px; font-size: 13px; }
+
+/* Responsibilities + tech stack */
+.dp-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.dp-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.dp-tags li { padding: 7px 14px; border-radius: 999px; font-size: 13px; line-height: 1.5; }
+
+/* Banner + Steam */
+.dp-banner { width: 100%; height: 220px; object-fit: cover; object-position: center 30%; border-radius: 14px; display: block; }
+.dp-steam { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+.dp-steam iframe { border: 0; width: 100%; max-width: 500px; height: 190px; }
+
+/* Back / next */
+.dp-foot { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; border-top: 1px solid #ece8dc; padding-top: 20px; }
+
+@media (max-width: 640px) {
+  .dp-page { padding: 24px 20px 40px; gap: 32px; }
+  .dp-page h1 { font-size: 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .dp-page * { transition: none !important; animation: none !important; } }
