@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Collins</title>
+    <title>SyncSlate | Jonathan Collins</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Shared project page styles. Must come after stylesheet.css. -->
+    <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
 <div class="grid-bg">
@@ -23,8 +25,8 @@
             <div class="browser-address">www.jonathan-collins-portfolio.com/projects/sync-slate</div>
         </div>
         <div class="nav">
-            <a href="index.html" class="nav-item active">About Me</a>
-            <a href="index.html#projects" class="nav-item">Projects</a>
+            <a href="index.html" class="nav-item">About Me</a>
+            <a href="index.html#projects" class="nav-item active">Projects</a>
             <a href="index.html#skills" class="nav-item">Skills</a>
             <a href="index.html#experience" class="nav-item">Experience</a>
             <a href="index.html#contact" class="nav-item">Contact</a>
@@ -38,40 +40,71 @@
                 <i class="fa-solid fa-file-lines"></i> CV
             </a>
         </div>
-        <div class="game-content">
-            <div class="maingrid">
-                <div>
-                    <h1>Traffic Game</h1>
-                    <h2>A small traffic game built with TypeScript and Babylon.js for the web</h2>
-                    <img src="images/traffic.gif" alt="Traffic Light Sprite" class="traffic">
-                    <a href="https://extrasoupgames.github.io/TrafficGame/" class="play-btn" target="_blank">
-    ▶ Play in Browser
-</a>
+
+        <main class="dp-page dp-theme-rose">
+            <a href="index.html#projects"><i class="fa-solid fa-arrow-lef"></i> Back to projects</a>
+
+            <header class="dp-hero">
+                <div class="dp-hero-text">
+                    <h1>SyncSlate</h1>
+                    <p class="dp-sub">A collaborative whiteboard powered by my C++ UDP networking library.</p>
+                    <ul class="dp-chips">
+                        <li class="dp-chip-green">C++</li>
+                        <li class="dp-chip-green">SDL</li>
+                        <li class="dp-chip-green">ImGui</li>
+                        <li class="dp-chip-pink">UDP</li>
+                        <li class="dp-chip-beige">In early development</li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="images/sync-slate-gif.gif" alt="Traffic gameplay showing cars stopping and traffic control" class="demo-img"/>
+                <div class="dp-callout">
+                    <h2>Work in progress</h2>
+                    <p>SyncSlate is at an early stage, so there isn't much to see yet. The repo shows how it's coming together.</p>
+                    <a class="dp-btn" href="https://github.com/JonnyCollinsPlusPlus/SyncSlate" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
                 </div>
-            </div>
-            <div class="bio-styling">
-                <p>I made this game to explore game development for web. To start, I chose <b>babylon.js</b> with <b>typescript</b> as my tools. I 
-                    used sample assets so that I could focus on getting to grips with the software, as well as building
-                    my own CI/CD pipeline using <b>GitHub Actions</b>. The game is playable
-                     <b><a href="https://extrasoupgames.github.io/TrafficGame/" target="_blank" rel="noopener noreferrer">
-                        here</a></b> and the github repo can be found
-                     <b><a href="https://github.com/ExtraSoupGames/TrafficGame" target="_blank" rel="noopener noreferrer">here</a></b>.
-                </p>
-            </div>
-            <br>
-            <div class="maingrid-traffic">
-                <img src="images/sync-slate.png" alt="Traffic game front cover" class="demo-img" width="346" height="442"/>
-                <div>
-                <p>This project allowed me to explore a different way of distributing games, while also
-                    learning a new language (TypeScript). While the game does not have much content, the
-                    project was invaluable in teaching me about the different ways games can be made.
-                </p>
+            </header>
+
+            <section class="dp-intro" style="grid-template-columns: 1fr;">
+                <p>SyncSlate is a collaborative whiteboard built on top of my C++ networking library,
+                <b><a href="networking-library.html">UDPGameNetworking</a></b>. It is a downloadable desktop application
+                made with <b>SDL</b> and <b>ImGui</b>. I started it to put the library to work in something other than a game,
+                and to practise building real-time, multi-user software.</p>
+            </section>
+
+            <section class="dp-section">
+                <h2>How it will work</h2>
+                <div class="dp-grid">
+                    <div class="dp-tile dp-tile-pink">
+                        <h3>Live updates over UDP</h3>
+                        <p>Cursors and strokes that are still being drawn are sent to the other users over UDP, so everyone sees them in real time.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-green">
+                        <h3>Finished strokes over TCP</h3>
+                        <p>Once a stroke is complete, its full data is sent to the server over TCP, so every user ends up with the same board.</p>
+                    </div>
+                    <div class="dp-tile dp-tile-beige">
+                        <h3>Built on my library</h3>
+                        <p>Both kinds of message use UDPNetworking, including its TCP-style acknowledgement option.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section class="dp-section">
+                <h2>Tech stack</h2>
+                <ul class="dp-tags">
+                    <li class="dp-chip-green">C++</li>
+                    <li class="dp-chip-green">SDL</li>
+                    <li class="dp-chip-green">ImGui</li>
+                    <li class="dp-chip-pink">UDPNetworking</li>
+                    <li class="dp-chip-beige">CMake</li>
+                    <li class="dp-chip-beige">vcpkg</li>
+                </ul>
+            </section>
+
+            <footer class="dp-foot">
+                <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to projects</a>
+                <a href="vr-project.html">Next project <i class="fa-solid fa-arrow-right"></i></a>
+            </footer>
+        </main>
     </div>
 </div>
 <script src="script.js"></script>
