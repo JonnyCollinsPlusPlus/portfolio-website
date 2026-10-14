@@ -56,7 +56,7 @@ li {
     margin-left: auto;
 }
 
-.nav-item.active, nav-item-right.active {
+.nav-item.active, .nav-item-right.active {
     text-decoration: underline;
 }
 
@@ -139,7 +139,6 @@ div {
     font-family: "Bitcount", system-ui;
     font-optical-sizing: auto;
     font-style: normal;
-
 }
 
 @keyframes fadeOut {
@@ -165,21 +164,27 @@ div {
 }
 
 .bio-styling {
-    display: flex;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 8%;
-    padding-right: 8%;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 2% 10%;
     min-height: 100px;
-    text-align: centre;
     position: relative;
+}
+
+.bio-styling p {
+    max-width: 65ch;
+    line-height: 1.6;
+    margin: 0 0 1rem;
 }
 
 .bio-styling a {
     text-decoration: underline;
     color: #000;
+}
+
+.bio-lead {
+    font-family: "Bitcount", system-ui;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 hr {
@@ -243,10 +248,10 @@ hr.animate {
 
 .project-images-gd {
     display: grid;
-    justify-content: centre;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-    grid-template-areas: 
+    grid-template-areas:
         "due-process-img network-library-img loco-comotives-img"
         "dp-desc udp-desc lc-desc"
         "user-api-img sync-slate-img vr-project-img"
@@ -271,6 +276,7 @@ hr.animate {
 .project-images-gd a:hover {
     font-size: 30px;
 }
+
 .due-process-img {
     grid-area: due-process-img;
 }
@@ -331,6 +337,7 @@ hr.animate {
     text-shadow: gray 1px 1px;
     transition: background 0.2s, transform 0.15s;
 }
+
 .play-btn:hover {
     background: #7a8c4a;
     transform: translateY(-2px);
@@ -365,8 +372,6 @@ hr.animate {
     width: 100%;
 }
 
-
-
 .maingrid-traffic {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -383,8 +388,7 @@ hr.animate {
     width: 100%;
 }
 
-
-.gallery{
+.gallery {
     display: flex;
     width: 100%;
     gap: 5px;
@@ -400,8 +404,8 @@ hr.animate {
     cursor: pointer;
 }
 
-.gallery img:hover{
-    flex: 2
+.gallery img:hover {
+    flex: 2;
 }
 
 .networking-header {
@@ -412,6 +416,7 @@ hr.animate {
 .glow-purple {
     text-shadow: 2px 2px 5px plum;
 }
+
 .glow-green {
     text-shadow: 2px 2px 5px green;
 }
@@ -445,18 +450,19 @@ hr.animate {
 .timeline {
   position: relative;
   padding-left: 12%;
-  padding-right: 10%
+  padding-right: 10%;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: calc(10% - 1px); /* align with where content starts */
+  left: calc(10% - 1px);
   top: 0;
   width: 2px;
   height: 100%;
   background: #000;
 }
+
 .entry {
   position: relative;
   margin-bottom: 1rem;
@@ -465,7 +471,7 @@ hr.animate {
 .entry::before {
   content: '';
   position: absolute;
-  left: calc(-2% - 14px); /* pulls it back to sit on the line */
+  left: calc(-2% - 14px);
   top: 3px;
   width: 12px;
   height: 12px;
@@ -473,16 +479,17 @@ hr.animate {
   background: #fff;
   border: 2px solid #000;
 }
+
 .entry div {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
+
 .subtle {
   color: #888;
   font-size: 0.85em;
 }
-
 
 .features-list-tt {
     display: grid;
@@ -499,7 +506,6 @@ hr.animate {
     border-left: 3px solid powderblue;
     border-radius: 4px;
 }
-
 
 .traffic {
     float: right;
@@ -713,7 +719,6 @@ hr.animate {
     transform: translateY(-2px);
 }
 
-
 .tt-grade-badge {
     display: inline-flex;
     align-items: center;
@@ -738,7 +743,6 @@ hr.animate {
 .tt-row-con .tt-icon { color: #A32D2D; }
 .tt-row-pro .tt-row-text { color: #085041; }
 .tt-row-con .tt-row-text { color: #555; }
-
 
 .tt-col {
     padding: 1.25rem;
@@ -786,7 +790,6 @@ hr.animate {
 
 .tt-row:last-child { margin-bottom: 0; }
 
-
 .tt-compare {
     padding: 1.5rem 5% 2rem;
     align-self: center;
@@ -811,14 +814,13 @@ hr.animate {
     overflow: hidden;
 }
 
-
 .tt-terminal {
     background: #0d1117;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #30363d;
     width: 70%;
-    margin-top: 5%
+    margin-top: 5%;
 }
 
 .tt-terminal-bar {
@@ -875,21 +877,21 @@ hr.animate {
     max-width: 560px;
     height: 315px;
 }
-/*DP VIDEO FIX*/
-@media (min-width: 1025px) and (max-width: 1520px){
+
+@media (min-width: 1025px) and (max-width: 1520px) {
     .dp-header {
         grid-template-columns: 1fr;
     }
+
     .dp-header iframe {
         width: 100%;
-        max-width: 462;
+        max-width: 462px;
         height: 260px;
         justify-self: center;
     }
 }
-/*IPAD FIXES*/
-@media (min-width: 769px) and (max-width: 1024px) {
 
+@media (min-width: 769px) and (max-width: 1024px) {
   .browser-window {
     max-width: 100%;
   }
@@ -898,19 +900,19 @@ hr.animate {
     padding: 16px;
   }
 
-  /* Hero grid: stack on tablet */
   .maingrid {
     grid-template-columns: 1fr;
   }
-  .dp-header {
-      grid-template-columns: 1fr;
-  }
-  .dp-header iframe {
-      width: 100%;
-      max-width: 462;
-      height: 260px;
-      justify-self: center;
 
+  .dp-header {
+    grid-template-columns: 1fr;
+  }
+
+  .dp-header iframe {
+    width: 100%;
+    max-width: 462px;
+    height: 260px;
+    justify-self: center;
   }
 
   .maingrid iframe {
@@ -918,7 +920,6 @@ hr.animate {
     height: 260px;
   }
 
-  /* Due Process bottom section: 2x2 grid instead of broken 2-col */
   .maingrid-dueprocess {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -933,7 +934,6 @@ hr.animate {
     width: 100%;
   }
 
-  /* Tidal Tussle grids */
   .maingrid-tt,
   .maingrid-networking {
     grid-template-columns: 1fr;
@@ -951,7 +951,6 @@ hr.animate {
     grid-template-columns: 1fr auto 1fr;
   }
 
-  /* Other project grids */
   .maingrid-traffic,
   .maingrid-vr {
     grid-template-columns: 1fr;
@@ -960,7 +959,6 @@ hr.animate {
     width: auto;
   }
 
-  /* Skills: 2 col instead of 6 */
   .bento {
     grid-template-columns: 1fr 1fr;
   }
@@ -979,7 +977,6 @@ hr.animate {
     padding-bottom: 4%;
   }
 
-  /* Project grid */
   .project-images-gd {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -998,13 +995,8 @@ hr.animate {
     width: 100%;
   }
 }
-/* ============================================
-   MOBILE FIXES — paste at the bottom of stylesheet.css
-   ============================================ */
 
 @media (max-width: 768px) {
-
-  /* --- Outer wrapper --- */
   .grid-bg {
     padding: 12px;
   }
@@ -1013,7 +1005,6 @@ hr.animate {
     max-width: 100%;
   }
 
-  /* --- Nav: allow wrapping, smaller text --- */
   .nav {
     flex-wrap: wrap;
   }
@@ -1023,7 +1014,6 @@ hr.animate {
     padding: 6px 10px;
   }
 
-  /* --- Intro --- */
   .browser-intro {
     min-height: 280px;
     padding: 8%;
@@ -1041,16 +1031,14 @@ hr.animate {
     font-size: 36px !important;
   }
 
-  /* --- Bio: hide the laptop sprite on mobile, it overlaps text --- */
-  .laptop-sprite {
-    display: none;
+  .bio-lead {
+    font-size: 1.6rem;
   }
 
   .bio-styling {
     padding: 4% 6%;
   }
 
-  /* --- Projects: one card per project (image → title → description) --- */
   .project-images-gd {
     display: flex;
     flex-direction: column;
@@ -1060,21 +1048,15 @@ hr.animate {
     gap: 0;
   }
 
-  /* Each image becomes the top of its card */
   .project-images-gd img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
-    display: block;
+    display: none;
   }
 
-  /* Each desc block becomes the bottom of its card */
   .project-images-gd > div {
     border: 1px solid #e8e4de;
-    border-top: none;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     padding: 12px 16px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     background: #fafaf8;
   }
 
@@ -1093,7 +1075,6 @@ hr.animate {
     font-size: 20px;
   }
 
-  /* Reset grid-area since we're using flex now */
   .due-process-img,
   .loco-comotives-img,
   .network-library-img,
@@ -1109,21 +1090,19 @@ hr.animate {
     grid-area: unset;
   }
 
-  /* Force the correct visual order so image always comes before its desc */
-  .due-process-img    { order: 1; }
-  .dp-desc            { order: 2; }
-  .loco-comotives-img { order: 3; }
-  .lc-desc            { order: 4; }
-  .network-library-img{ order: 5; }
-  .udp-desc           { order: 6; }
-  .user-api-img   { order: 7; }
-  .user-api-desc  { order: 8; }
-  .sync-slate-img   { order: 9; }
-  .sync-slate-desc  { order: 10; }
-  .vr-project-img     { order: 11; }
-  .vr-desc            { order: 12; }
+  .due-process-img     { order: 1; }
+  .dp-desc             { order: 2; }
+  .loco-comotives-img  { order: 3; }
+  .lc-desc             { order: 4; }
+  .network-library-img { order: 5; }
+  .udp-desc            { order: 6; }
+  .user-api-img        { order: 7; }
+  .user-api-desc       { order: 8; }
+  .sync-slate-img      { order: 9; }
+  .sync-slate-desc     { order: 10; }
+  .vr-project-img      { order: 11; }
+  .vr-desc             { order: 12; }
 
-  /* --- Skills: remove the crushing side padding --- */
   .skills-section {
     padding: 0 4%;
     padding-bottom: 4%;
@@ -1140,7 +1119,6 @@ hr.animate {
     box-sizing: border-box;
   }
 
-  /* --- Timeline: stack date below description --- */
   .entry div {
     flex-direction: column;
     gap: 2px;
@@ -1150,7 +1128,6 @@ hr.animate {
     font-size: 0.8em;
   }
 
-  /* --- Contact: single column form --- */
   .contact-section {
     padding: 0 6%;
     padding-bottom: 6%;
@@ -1160,44 +1137,32 @@ hr.animate {
     grid-template-columns: 1fr;
   }
 
-  /* --- Section titles --- */
   .project-title,
   .experience-title {
     padding-left: 6%;
   }
-
-  .project-images-gd img {
-  display: none;
-}
-
-.project-images-gd > div {
-  border: 1px solid #e8e4de;
-  border-radius: 10px;
-  padding: 12px 16px 20px;
-  margin-bottom: 12px;
-  background: #fafaf8;
-}
 
   .maingrid {
     grid-template-columns: 1fr;
     padding-left: 0;
     width: 100%;
   }
+
   .dp-header {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
+
   .dp-header iframe {
-      width: 100%;
-      height: 220px;
-      justify-self: center;
+    width: 100%;
+    height: 220px;
+    justify-self: center;
   }
- 
+
   .maingrid iframe {
     width: 100%;
     height: 220px;
   }
- 
-  /* --- Bottom section: stack Steam widget above responsibilities --- */
+
   .maingrid-dueprocess {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -1210,35 +1175,26 @@ hr.animate {
     width: auto;
     gap: 20px;
   }
- 
+
   .maingrid-dueprocess .iframe iframe {
     width: 100%;
     height: 190px;
   }
- 
-  /* --- Responsibilities list: single column, full width --- */
+
   .features-list {
     grid-template-columns: 1fr;
     width: 100%;
   }
- 
-  /* --- Game content padding --- */
+
   .game-content {
     padding: 4%;
   }
 
-  .maingrid {
-    grid-template-columns: 1fr;
-    padding-left: 0;
-    width: 100%;
-  }
- 
   .maingrid video {
     width: 100%;
     height: auto;
   }
- 
-  /* --- loco-features: stack text above systems list --- */
+
   .loco-features {
     grid-template-columns: 1fr;
     grid-template-areas: none;
@@ -1247,158 +1203,120 @@ hr.animate {
     padding-right: 5%;
     margin-top: 20px;
   }
- 
-  /* --- Gallery: fixed height so it doesn't go tiny --- */
+
   .gallery img {
     height: 160px;
   }
- 
-  /* --- Game content padding --- */
-  .game-content {
-    padding: 4%;
-  }
 
-    .maingrid iframe {
-    width: 100%;
-    height: 220px;
-  }
- 
-  /* --- Joystick: stop it floating awkwardly --- */
   .joystick {
     float: none;
     display: block;
     margin-top: 12px;
   }
- 
-  /* --- Features section: stack gif above features list --- */
+
   .maingrid-networking {
     grid-template-columns: 1fr;
     padding-left: 5%;
     padding-right: 5%;
     width: auto;
   }
- 
+
   .maingrid-networking .demo-img {
     width: 100%;
     height: auto;
   }
- 
-  /* --- Features list: single column --- */
-  .features-list {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
- 
-  /* --- Title overflowing off screen --- */
+
   .networking-header {
     font-size: 1.6rem !important;
     word-break: break-word;
   }
 
-    .maingrid .demo-img {
+  .maingrid .demo-img {
     width: 100%;
     height: auto;
   }
- 
-  /* --- Joystick: stop floating into the h2 --- */
-  .joystick {
-    float: none;
-    display: block;
-    margin-top: 12px;
-  }
- 
-  /* --- VR features section: stack image above list --- */
+
   .maingrid-vr {
     grid-template-columns: 1fr;
     padding-left: 5%;
     padding-right: 5%;
     width: auto;
   }
- 
+
   .maingrid-vr .demo-img {
     width: 100%;
     height: auto;
   }
- 
-  /* --- h2 getting clipped --- */
+
   h2 {
     font-size: 20px !important;
     word-break: break-word;
   }
 
-    .traffic {
+  .traffic {
     float: none;
     display: block;
     margin-top: 12px;
   }
- 
-  /* --- Top: gameplay gif full width --- */
-  .maingrid .demo-img {
-    width: 100%;
-    height: auto;
-  }
- 
-  /* --- Bottom: stack cover image above text --- */
+
   .maingrid-traffic {
     grid-template-columns: 1fr;
     padding-left: 5%;
     padding-right: 5%;
     width: auto;
   }
- 
+
   .maingrid-traffic .demo-img {
     width: 100%;
     height: auto;
   }
-    .maingrid-tt {
+
+  .maingrid-tt {
     grid-template-columns: 1fr;
     padding-left: 0;
     width: 100%;
   }
- 
-  /* --- Fish sprite: stop floating --- */
+
   .fish {
     float: none;
     display: block;
     margin-top: 12px;
   }
- 
-  /* --- Code block: contain it, allow horizontal scroll --- */
+
   .tt-terminal {
     width: 100%;
     box-sizing: border-box;
     overflow-x: auto;
     margin-top: 16px;
   }
- 
+
   .tt-code {
     white-space: pre;
     font-size: 0.7rem;
     overflow-x: auto;
   }
- 
-  /* --- UDP vs TCP comparison: tighten up --- */
+
   .tt-compare {
     padding: 0 4%;
     box-sizing: border-box;
   }
- 
+
   .tt-compare-grid {
     gap: 8px;
   }
- 
+
   .tt-col {
     padding: 12px;
   }
- 
+
   .tt-col-title {
     font-size: 0.9rem;
   }
- 
+
   .tt-row-text {
     font-size: 0.75rem;
   }
- 
+
   .tt-choice-banner {
     font-size: 0.8rem;
   }
